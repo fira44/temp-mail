@@ -22,12 +22,12 @@ pip install requests
 ```python
 from mail import Mail
 
-# Create a mail instance with default domains (outlook, google_plus, googlemail,gmail)
+# Create a mail instance with default domains (outlook, google_plus, googlemail,hotmail)
 mail = Mail()
 
-# Create a mail instance with specific domains (e.g., only gmail)
+# Create a mail instance with specific domains (e.g., only hotmail)
 
-# mail = Mail(["gmail"])
+# mail = Mail(["hotmail"])
 
 # Create a mail instance with a proxy
 # mail = Mail(proxy="http://user:pass@host:port")
@@ -43,13 +43,13 @@ print(f"Received emails: {emails}")
 
 ## API
 
-### Mail(domains=["outlook", "google_plus", "googlemail"], proxy="")
+### Mail(domains=["outlook", "hotmail", "google_plus", "googlemail"], proxy="")
 
 Constructor for the Mail class.
 
 **Parameters:**
-- `domains` (list): List of domain preferences for email generation. Default is ["outlook", "google_plus", "googlemail,"gmail"]. 
-  You can specify specific domains like ["gmail"] for only Gmail addresses.
+- `domains` (list): List of domain preferences for email generation. Default is ["outlook", "google_plus", "googlemail,"hotmail"]. 
+  You can specify specific domains like ["google_plus"] for only Gmail addresses.
 - `proxy` (str): Proxy URL to use for requests (optional)
 
 ### get_mail_adress()
