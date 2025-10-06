@@ -3,7 +3,7 @@ import time
 from urllib.parse import quote
 
 class Mail:
-    def __init__(self, domains = ["outlook", "google_plus", "hotmail", "googlemail"],proxy = ""):
+    def __init__(self, domains = ["outlook", "gmail_plus", "hotmail", "googlemail"],proxy = ""):
         self.session = requests.Session()
         if proxy != "":
             self.session.proxies = {"http": proxy, "https": proxy}
